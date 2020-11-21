@@ -265,15 +265,7 @@ my_data_merged$day <- weekdays(my_data_merged$date)
 #Including weekday/weekend information
 #R studio running in Portuguese here ... apologies
 my_data_merged$daytype <- "weekday"
-```
-
-
-```r
 my_data_merged[my_data_merged$day == "s攼㸱bado",]$daytype <- rep("weekend", times =length(my_data_merged[my_data_merged$day == "s攼㸱bado",]$daytype))
-```
-
-
-```r
 my_data_merged[my_data_merged$day == "domingo",]$daytype <- rep("weekend", times =length(my_data_merged[my_data_merged$day == "domingo",]$daytype))
 
 #To compare weekend and weekdays, showing time series, we will aggregate data by interval again, for weekends and weekdays
@@ -294,7 +286,7 @@ plot(my_data_merged_by_interval_weekend$interval,my_data_merged_by_interval_week
 plot(my_data_merged_by_interval_weekday$interval,my_data_merged_by_interval_weekday$average_steps,type = "l",ylab="Average steps",xlab="Interval in minutes",main = "Average steps per 5 min interval on week days")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-8-1.png)<!-- -->
+![](PA1_template_files/figure-html/unnamed-chunk-6-1.png)<!-- -->
 
 ```r
 #dev.off()
