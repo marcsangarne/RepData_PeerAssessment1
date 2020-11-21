@@ -127,15 +127,7 @@ my_data_merged$day <- weekdays(my_data_merged$date)
 #Including weekday/weekend information
 #R studio running in Portuguese here ... apologies
 my_data_merged$daytype <- "weekday"
-
-```
-
-```{r }
 my_data_merged[my_data_merged$day == "sábado",]$daytype <- rep("weekend", times =length(my_data_merged[my_data_merged$day == "sábado",]$daytype))
-
-```
-
-```{r }
 my_data_merged[my_data_merged$day == "domingo",]$daytype <- rep("weekend", times =length(my_data_merged[my_data_merged$day == "domingo",]$daytype))
 
 #To compare weekend and weekdays, showing time series, we will aggregate data by interval again, for weekends and weekdays
